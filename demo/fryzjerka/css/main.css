@@ -110,7 +110,7 @@ header nav li {
 }
 
 .img {
-  background-image: url("/img/hair-cutting.png");
+  background-image: url("/demo/fryzjerka/img/hair-cutting.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -240,7 +240,7 @@ header nav li {
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
-  background-image: url("../img/check.svg"); /* Twój plik SVG */
+  background-image: url("/demo/fryzjerka/img/check.svg"); /* Twój plik SVG */
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -279,7 +279,7 @@ header nav li {
 }
 
 .services .img {
-  background-image: url("/img/background-services.jpg");
+  background-image: url("/demo/fryzjerka/img/background-services.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -410,7 +410,7 @@ header nav li {
 }
 
 .about-us .img {
-  background-image: url("/img/hair-cutting3.png");
+  background-image: url("/demo/fryzjerka/img/hair-cutting3.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
