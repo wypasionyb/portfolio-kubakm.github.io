@@ -1,0 +1,93 @@
+function _0x155a() {
+  const _0x4003ba = [
+    "1133104ciDtoe",
+    "innerWidth",
+    "-170px",
+    "addEventListener",
+    "442040hknuzX",
+    "documentElement",
+    "0px",
+    "260BmDStE",
+    "querySelector",
+    "8qgAMDQ",
+    "48452tsSDDk",
+    "4fqyqRk",
+    "310077CgjWVP",
+    "264236noAlAV",
+    "style",
+    "16110FgrwYV",
+    "marginTop",
+    "187EZzkuJ",
+    "header",
+    "20px",
+    "241278gpWzfW",
+    "top",
+  ];
+  _0x155a = function () {
+    return _0x4003ba;
+  };
+  return _0x155a();
+}
+function _0x11f2(_0x50b7a0, _0x28a13a) {
+  const _0x155a71 = _0x155a();
+  return (
+    (_0x11f2 = function (_0x11f206, _0x33eebb) {
+      _0x11f206 = _0x11f206 - 0x169;
+      let _0x49d917 = _0x155a71[_0x11f206];
+      return _0x49d917;
+    }),
+    _0x11f2(_0x50b7a0, _0x28a13a)
+  );
+}
+const _0x1f1355 = _0x11f2;
+(function (_0x202cdd, _0xf15911) {
+  const _0x327f3d = _0x11f2,
+    _0x25ee62 = _0x202cdd();
+  while (!![]) {
+    try {
+      const _0x3da377 =
+        -parseInt(_0x327f3d(0x171)) / 0x1 +
+        (parseInt(_0x327f3d(0x172)) / 0x2) *
+          (-parseInt(_0x327f3d(0x17b)) / 0x3) +
+        -parseInt(_0x327f3d(0x174)) / 0x4 +
+        (parseInt(_0x327f3d(0x16e)) / 0x5) *
+          (-parseInt(_0x327f3d(0x176)) / 0x6) +
+        -parseInt(_0x327f3d(0x17d)) / 0x7 +
+        (-parseInt(_0x327f3d(0x170)) / 0x8) *
+          (parseInt(_0x327f3d(0x173)) / 0x9) +
+        (-parseInt(_0x327f3d(0x16b)) / 0xa) *
+          (-parseInt(_0x327f3d(0x178)) / 0xb);
+      if (_0x3da377 === _0xf15911) break;
+      else _0x25ee62["push"](_0x25ee62["shift"]());
+    } catch (_0x5dd000) {
+      _0x25ee62["push"](_0x25ee62["shift"]());
+    }
+  }
+})(_0x155a, 0x22380),
+  document[_0x1f1355(0x16a)]("DOMContentLoaded", function () {
+    const _0x4d16fe = _0x1f1355,
+      _0x14a975 = document[_0x4d16fe(0x16f)](_0x4d16fe(0x179));
+    let _0x58655e = 0x0;
+    window["addEventListener"]("scroll", () => {
+      const _0x136075 = _0x4d16fe,
+        _0x175b6c =
+          window["pageYOffset"] || document[_0x136075(0x16c)]["scrollTop"];
+      if (_0x175b6c > _0x58655e && _0x175b6c > 0x38)
+        _0x14a975["style"][_0x136075(0x17c)] = _0x136075(0x169);
+      else {
+        if (_0x175b6c <= 0x38)
+          (_0x14a975["style"][_0x136075(0x17c)] = "56px"),
+            _0x14a975[_0x136075(0x175)]["marginTop"] == _0x136075(0x16d) &&
+              (_0x14a975[_0x136075(0x175)][_0x136075(0x177)] =
+                _0x136075(0x17a));
+        else
+          _0x175b6c < _0x58655e &&
+            ((_0x14a975["style"][_0x136075(0x17c)] = "0"),
+            _0x14a975[_0x136075(0x175)][_0x136075(0x177)] == _0x136075(0x17a) &&
+              (_0x14a975["style"][_0x136075(0x177)] = "0"));
+      }
+      _0x58655e = _0x175b6c <= 0x0 ? 0x0 : _0x175b6c;
+    }),
+      window[_0x4d16fe(0x17e)] <= 0x1f4 &&
+        (_0x14a975[_0x4d16fe(0x175)]["marginTop"] = _0x4d16fe(0x17a));
+  });

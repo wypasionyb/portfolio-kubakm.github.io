@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Profesjonalna pielęgnacja i stylizacja włosów. Oferujemy usługi fryzjerskie na najwyższym poziomie, używając tylko sprawdzonych produktów. Umów się na wizytę i podkreśl swój styl!"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/calendar.css" />
+    <link rel="icon" href="img/icon.png" />
+    <title>Hair Art</title>
+  </head>
+  <body>
+    <div class="line-up">
+      <p>
+        Profesjonalna pielęgnacja i stylizacja włosów – umów się na wizytę już
+        dziś!
+      </p>
+    </div>
+    <header>
+      <h2>Hair Art</h2>
+      <nav>
+        <li><a href="index.html">Strona Główna</a></li>
+        <li><a href="about-us.html">O nas</a></li>
+        <li><a href="calendar.html">Kalendarz</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </nav>
+    </header>
+    <main>
+      <div class="img">
+        <div class="center-fill">
+          <h1>Kalendarz</h1>
+          <p>
+            Sprawdź dostępność naszych usług i umów się na wizytę w dogodnym dla
+            siebie terminie. Nasz kalendarz jest zawsze aktualny, abyś mógł
+            łatwo znaleźć wolne terminy.
+          </p>
+        </div>
+      </div>
+      <h1 style="text-align: center">Wybierz termin i umów się</h1>
+      <div class="calendar-container">
+        <div class="calendar-header">
+          <button id="prevMonth">&#8592;</button>
+          <span id="monthYear"></span>
+          <button id="nextMonth">&#8594;</button>
+        </div>
+        <table class="calendar-table">
+          <thead>
+            <tr>
+              <th>Pn</th>
+              <th>Wt</th>
+              <th>Śr</th>
+              <th>Cz</th>
+              <th>Pt</th>
+              <th>So</th>
+              <th>Nd</th>
+            </tr>
+          </thead>
+          <tbody id="calendarBody"></tbody>
+        </table>
+      </div>
+      <div class="c">
+        <input type="time" placeholder="O godzinie..." id="timeInput" />
+      </div>
+      <div class="c">
+        <p id="textInput"></p>
+      </div>
+      <div class="c">
+        <button class="primary">Umów się na wizytę</button>
+      </div>
+    </main>
+    <footer>
+      Copyright 2025/2025 Kuba Km. To jest projekt demo. Wszelkie prawa
+      zastrzeżone!
+    </footer>
+    <script src="js/listenersAboutUs.js"></script>
+    <!-- Header listener -->
+    <script src="js/calendar.js"></script>
+    <script src="js/appointment.js"></script>
+  </body>
+</html>
