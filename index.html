@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Kuba Km – pełen energii frontendowiec i backendowiec. Tworzę nowoczesne, responsywne strony i aplikacje, które działają jak marzenie. Z pasją koduję w JavaScript, React, Node.js i innych technologiach. Sprawdź moje projekty i przekonaj się, że programowanie to dla mnie styl życia."
+      content="Kuba Km – frontend i backend developer. Tworzę nowoczesne, responsywne strony i aplikacje. Sprawdź moje projekty i przekonaj się, że programowanie to styl życia."
     />
     <meta
       name="keywords"
-      content="Kuba Km, frontend developer, backend developer, fullstack developer, JavaScript, React, Node.js, TypeScript, HTML5, CSS3, portfolio, web development, responsive design, REST API, software engineer, programming, coding, software development, personal website"
+      content="Kuba Km, frontend developer, backend developer, fullstack developer, JavaScript, React, Node.js, TypeScript, HTML5, CSS3, portfolio, web development, responsive design, REST API"
     />
     <meta name="author" content="Kuba Km" />
     <meta name="theme-color" content="#191919" />
@@ -18,37 +18,106 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.css" />
     <title>Kuba Km | Portfolio</title>
   </head>
   <body>
+    <!-- HEADER -->
     <header>
       <h1>Kuba Km</h1>
       <nav>
         <ul>
-          <li><a href="index.html">Strona główna</a></li>
+          <li><a href="#home">Strona główna</a></li>
           <li><a href="#about">O mnie</a></li>
           <li><a href="#projects">Projekty</a></li>
           <li><a href="#contact">Kontakt</a></li>
         </ul>
       </nav>
     </header>
+
+    <!-- HOME -->
     <main>
-      <div class="full">
-        <div class="ball"></div>
-        <h1>Cześć, Jestem <span style="color: royalblue">Kuba</span>!</h1>
+      <section id="home" class="section c">
+        <h1 id="normal">
+          Cześć, jestem <strong><span class="highlight">Kuba</span></strong>
+        </h1>
         <p>
-          Jestem młodym, pełnym energii programistą z 3-letnim stażem.
-          Specjalizuję się w React, tworzeniu nowoczesnych stron internetowych,
-          aplikacjach desktopowych z Electron oraz backendzie w Node.js.
-          Kodowanie to dla mnie nie tylko praca, ale styl życia.
+          Programista od 3 lat. Tworzę nowoczesne, responsywne strony i
+          aplikacje webowe. Pracuję z technologiami takimi jak JavaScript,
+          React, Node.js, Electron, HTML i CSS. Uwielbiam wyzwania i stale
+          rozwijam swoje umiejętności.
         </p>
-      </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section about-section">
+        <h2>O mnie</h2>
+        <div class="about-content">
+          <p class="about-paragraph">
+            Jestem pasjonatem programowania od 3 lat, który wierzy, że dobra
+            strona to połączenie funkcjonalności, estetyki i responsywności.
+            Tworzę zarówno frontend, jak i backend, pracując z JavaScript,
+            React, Node.js, Electron, HTML i CSS.
+          </p>
+          <p class="about-paragraph">
+            Uwielbiam wyzwania i stale rozwijam swoje umiejętności, aby
+            dostarczać jak najlepsze rozwiązania. Moim celem jest tworzenie
+            nowoczesnych aplikacji i stron internetowych, które działają jak
+            marzenie i są przyjemne w użyciu dla użytkowników.
+          </p>
+          <ul class="skills-list">
+            <li>💻 JavaScript / TypeScript</li>
+            <li>⚛ React / Redux</li>
+            <li>🟢 Node.js / Express</li>
+            <li>🖌 HTML5 & CSS3 / Flexbox & Grid</li>
+            <li>🖥 Electron / Aplikacje Desktopowe</li>
+            <li>📱 Responsywny Design / UX</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section projects-section">
+        <h2>Projekty</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <img src="img/Project-1.png" alt="Projekt 1" />
+            <h3>Strona Demo Fryzjerki</h3>
+            <p>
+              To jest demo aplikacji fryzjerskiej, stworzone w celu prezentacji
+              funkcjonalności i interfejsu. Idealne do testów lub jako przykład
+              dla klientów / portfolio.
+            </p>
+            <a
+              href="https://www.kubakm-web.pl/demo/fryzjerka/index.html"
+              class="btn"
+              >Zobacz demo</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section contact-section">
+        <h2>Kontakt</h2>
+        <div class="contact-container">
+          <p>
+            📧 Email:
+            <a href="mailto:kontakt@kubakm-web.pl">kontakt@kubakm-web.pl</a>
+          </p>
+          <p>📱 Telefon: <a href="tel:+48518249437">+48 518 249 437</a></p>
+          <p>🌐 GitHub: <a href="https://github.com/KubaKm">KubaKm</a></p>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2025 Kuba Km. Wszelkie prawa zastrzeżone.</p>
+    </footer>
 
     <script src="js/main.js"></script>
   </body>
