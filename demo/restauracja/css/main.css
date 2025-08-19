@@ -1,0 +1,333 @@
+:root {
+  --accent: #ff7043;
+  --accent-2: #ff9a66;
+  --bg-1: #fffaf5;
+  --bg-2: #fff2e6;
+  --text: #222;
+  --muted: #6b6b6b;
+  --card-shadow: 0 8px 24px rgba(26, 26, 26, 0.08);
+  --radius: 14px;
+  --glass: rgba(255, 255, 255, 0.6);
+  --max-width: 1100px;
+}
+
+/* ---------- Reset ---------- */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  color: var(--text);
+  background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.4;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ---------- Layout ---------- */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 28px;
+}
+
+header {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 112, 67, 0.12),
+    rgba(255, 154, 102, 0.06)
+  );
+  padding: 18px 0;
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.brand .logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: var(--card-shadow);
+}
+.brand h2 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+nav a {
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: var(--muted);
+  transition: all 0.18s;
+}
+nav a:hover {
+  background: rgba(0, 0, 0, 0.03);
+  color: var(--text);
+}
+
+/* hamburger */
+.hamburger {
+  display: none;
+  border: 0;
+  background: transparent;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 56px 0;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 28px;
+  align-items: center;
+}
+.hero-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.6)
+  );
+  border-radius: 18px;
+  padding: 36px;
+  box-shadow: var(--card-shadow);
+}
+.kicker {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 112, 67, 0.12);
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.hero h1 {
+  font-size: 2.2rem;
+  margin: 0 0 12px;
+}
+.hero p {
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 0;
+}
+.btn-primary {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: white;
+  box-shadow: 0 8px 20px rgba(255, 112, 67, 0.14);
+}
+.btn-ghost {
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.06);
+  color: var(--text);
+}
+
+.hero-visual {
+  border-radius: 16px;
+  padding: 18px;
+  background: linear-gradient(180deg, #fff 0%, #fff8f2 100%);
+  box-shadow: var(--card-shadow);
+}
+.dish-preview {
+  height: 260px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ffd9c8, #fff5f0);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  color: #b24d2f;
+  font-size: 1.1rem;
+}
+
+/* ---------- Cards / Featured dishes ---------- */
+.section {
+  padding: 36px 0;
+}
+.section h3 {
+  margin: 0 0 18px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.card .thumb {
+  width: 96px;
+  height: 72px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffece2, #fff2f0);
+  color: #b24d2f;
+}
+.card h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+.card p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* ---------- Reservation form (modal) ---------- */
+.modal-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.45);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal {
+  background: linear-gradient(180deg, white, #fffaf7);
+  padding: 18px;
+  border-radius: 14px;
+  max-width: 520px;
+  width: 100%;
+  box-shadow: 0 18px 40px rgba(20, 20, 20, 0.25);
+}
+.modal h4 {
+  margin: 0 0 12px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+.field label {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  color: var(--muted);
+}
+.field input,
+.field textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 0.95rem;
+}
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  padding: 18px 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.02), transparent);
+}
+footer .fwrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+footer p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    padding: 16px;
+  }
+  .nav {
+    display: none;
+  }
+  .hamburger {
+    display: inline-flex;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .brand h2 {
+    font-size: 1rem;
+  }
+}
+
+/* small helpers */
+.muted {
+  color: var(--muted);
+}

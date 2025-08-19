@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Domowy Obiadek — Demo</title>
+
+    <!-- Poppins (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <meta
+      name="description"
+      content="Demo strony restauracji Domowy Obiadek — HTML/CSS (+ minimalny JS)"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container nav-row">
+        <div class="brand">
+          <div class="logo">DO</div>
+          <div>
+            <h2>Domowy Obiadek</h2>
+            <div class="muted" style="font-size: 0.82rem; margin-top: 4px">
+              Tradycja. Smak. Szybkie serwowanie.
+            </div>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="Główne menu">
+          <a href="#">Strona główna</a>
+          <a href="#menu">Menu</a>
+          <a href="#rezerwacje">Rezerwacje</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+
+        <button class="hamburger" aria-label="Pokaż menu" id="hambBtn">
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-card">
+          <div class="kicker">Domowe &amp; Sezonowe</div>
+          <h1>Najlepsze obiady jak u mamy — bez czekania</h1>
+          <p>
+            Proste, sycące dania przygotowywane ze świeżych składników. Zobacz
+            nasze polecane zestawy dnia i zarezerwuj stolik.
+          </p>
+
+          <div class="actions">
+            <button class="btn btn-primary" id="reserveBtn">
+              Zarezerwuj stolik
+            </button>
+            <a class="btn btn-ghost" href="#menu">Zobacz menu</a>
+          </div>
+
+          <div
+            style="margin-top: 18px; color: var(--muted); font-size: 0.92rem"
+          >
+            Otwarte: Pon–Pt 11:00–20:00 • Sob 12:00–18:00
+          </div>
+        </div>
+
+        <aside class="hero-visual">
+          <div class="dish-preview">🥘 Dzisiaj: Gulasz z kluskami</div>
+
+          <div style="display: flex; gap: 10px; margin-top: 12px">
+            <div
+              style="
+                flex: 1;
+                background: #fff;
+                padding: 12px;
+                border-radius: 10px;
+                box-shadow: var(--card-shadow);
+                text-align: center;
+              "
+            >
+              Zestaw dnia<br /><strong>24 zł</strong>
+            </div>
+            <div
+              style="
+                width: 72px;
+                background: #fff;
+                padding: 12px;
+                border-radius: 10px;
+                box-shadow: var(--card-shadow);
+                text-align: center;
+              "
+            >
+              Weź na wynos
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- FEATURED DISHES -->
+      <section id="menu" class="section">
+        <h3>Polecane dania</h3>
+        <div class="grid">
+          <article class="card">
+            <div class="thumb">🍲</div>
+            <div>
+              <h4>Rosół z makaronem</h4>
+              <p class="muted">Klasyczny rosół — idealny na zimne dni.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb">🍛</div>
+            <div>
+              <h4>Gulasz wieprzowy</h4>
+              <p class="muted">Podawany z kluskami domowymi i surówką.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb">🥗</div>
+            <div>
+              <h4>Sałatka z kurczakiem</h4>
+              <p class="muted">Lekka opcja — świetna na lunch.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- RESERVATIONS / CONTACT -->
+      <section id="rezerwacje" class="section">
+        <h3>Zarezerwuj stolik</h3>
+        <p class="muted">
+          Możesz zarezerwować stolik online — to tylko demo, więc formularz nie
+          wysyła danych.
+        </p>
+
+        <div
+          style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 12px"
+        >
+          <div
+            style="
+              flex: 1;
+              min-width: 260px;
+              background: linear-gradient(180deg, #fff, #fffaf7);
+              padding: 14px;
+              border-radius: 12px;
+              box-shadow: var(--card-shadow);
+            "
+          >
+            <strong>Rezerwacja telefoniczna:</strong>
+            <div class="muted" style="margin-top: 6px">(+48) 500 600 700</div>
+          </div>
+
+          <div style="flex: 2; min-width: 260px">
+            <form
+              onsubmit="event.preventDefault();openModal();"
+              style="display: flex; gap: 8px; flex-wrap: wrap"
+            >
+              <input
+                type="text"
+                name="name"
+                placeholder="Twoje imię"
+                required
+                style="
+                  flex: 1;
+                  padding: 10px;
+                  border-radius: 8px;
+                  border: 1px solid rgba(0, 0, 0, 0.06);
+                "
+              />
+              <input
+                type="date"
+                name="date"
+                required
+                style="
+                  padding: 10px;
+                  border-radius: 8px;
+                  border: 1px solid rgba(0, 0, 0, 0.06);
+                "
+              />
+              <input
+                type="time"
+                name="time"
+                required
+                style="
+                  padding: 10px;
+                  border-radius: 8px;
+                  border: 1px solid rgba(0, 0, 0, 0.06);
+                "
+              />
+              <input
+                type="number"
+                name="people"
+                placeholder="Liczba osób"
+                required
+                min="1"
+                style="
+                  width: 120px;
+                  padding: 10px;
+                  border-radius: 8px;
+                  border: 1px solid rgba(0, 0, 0, 0.06);
+                "
+              />
+              <button
+                class="btn btn-primary"
+                style="
+                  margin-left: auto;
+                  padding: 10px 14px;
+                  border-radius: 10px;
+                "
+              >
+                Zarezerwuj
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="kontakt" class="section">
+        <h3>Kontakt</h3>
+        <p class="muted">
+          Adres: ul. Przykładowa 10, 00-000 Miasto • e-mail:
+          kontakt@domowyobiadek.pl
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container fwrap">
+        <p>Copyright 2025 Kuba Km. Demo — wszystkie prawa zastrzeżone.</p>
+        <div style="opacity: 0.9; font-weight: 600">Domowy Obiadek</div>
+      </div>
+    </footer>
+
+    <!-- modal (hidden by default) -->
+    <div
+      class="modal-bg"
+      id="modalBg"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+    >
+      <div class="modal" role="document">
+        <h4>Dziękujemy — rezerwacja przyjęta</h4>
+        <p class="muted">
+          To tylko demo: tutaj normalnie potwierdzilibyśmy Twoją rezerwację lub
+          wysłali e-mail.
+        </p>
+        <div
+          style="
+            display: flex;
+            gap: 8px;
+            justify-content: flex-end;
+            margin-top: 12px;
+          "
+        >
+          <button class="btn btn-ghost" id="closeModal">Zamknij</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
