@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.kubakm-web.pl/sitemap.xml
+Host: https://www.kubakm-web.pl
+User-agent: SemrushBot
+Disallow: /private/

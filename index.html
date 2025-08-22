@@ -1,27 +1,155 @@
 <!DOCTYPE html>
 <html lang="pl">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Podstawowe -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Title / Description -->
+    <title>Kuba Km — Frontend & Backend Developer | Portfolio</title>
     <meta
       name="description"
-      content="Kuba Km – frontend i backend developer. Tworzę nowoczesne, responsywne strony i aplikacje. Sprawdź moje projekty i przekonaj się, że programowanie to styl życia."
+      content="Kuba Km — frontend & backend developer. Tworzę nowoczesne, responsywne strony i aplikacje. Sprawdź moje projekty i skontaktuj się, jeśli chcesz profesjonalne rozwiązanie webowe."
     />
     <meta
-      name="keywords"
-      content="Kuba Km, frontend developer, backend developer, fullstack developer, JavaScript, React, Node.js, TypeScript, HTML5, CSS3, portfolio, web development, responsive design, REST API"
+      name="robots"
+      content="index, follow, max-snippet:200, max-image-preview:large, max-video-preview:-1"
     />
-    <meta name="author" content="Kuba Km" />
+    <link rel="canonical" href="https://www.kubakm-web.pl/" />
 
-    <link rel="icon" href="img/icon.png" type="image/x-icon" />
+    <!-- Author / Language -->
+    <meta name="author" content="Kuba Km" />
+    <meta http-equiv="Content-Language" content="pl" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/img/icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+
+    <!-- Open Graph (Facebook, LinkedIn etc.) -->
+    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Kuba Km — Frontend & Backend Developer"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio Kuba Km — nowoczesne strony i aplikacje webowe. Sprawdź projekty i przekonaj się o moich umiejętnościach."
+    />
+    <meta property="og:url" content="https://www.kubakm-web.pl/" />
+    <meta property="og:site_name" content="Kuba Km" />
+    <meta
+      property="og:image"
+      content="https://www.kubakm-web.pl/img/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Kuba Km — Frontend & Backend Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Portfolio Kuba Km — nowoczesne strony i aplikacje webowe."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.kubakm-web.pl/img/og-image.png"
+    />
+
+    <!-- Prefetch / Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/main.css?v=3" />
-    <title>Kuba Km | Portfolio</title>
+
+    <!-- Styles (versioned) -->
+    <link rel="stylesheet" href="/css/main.css?v=3" />
+
+    <!-- Structured data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://www.kubakm-web.pl/#person",
+            "name": "Kuba Km",
+            "url": "https://www.kubakm-web.pl/",
+            "sameAs": [
+              "https://github.com/USERNAME",
+              "https://www.linkedin.com/in/USERNAME"
+            ],
+            "jobTitle": "Frontend & Backend Developer",
+            "image": "https://www.kubakm-web.pl/img/avatar.png"
+          },
+          {
+            "@type": "WebSite",
+            "url": "https://www.kubakm-web.pl/",
+            "name": "Kuba Km",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://www.kubakm-web.pl/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5SJW97M2");
+    </script>
+    <!-- End Google Tag Manager -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "name": "Kuba Km",
+            "url": "https://www.kubakm-web.pl/",
+            "sameAs": [
+              "https://github.com/USERNAME",
+              "https://www.linkedin.com/in/USERNAME"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "url": "https://www.kubakm-web.pl/",
+            "name": "Kuba Km",
+            "description": "Portfolio frontend i backend developer"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.kubakm-web.pl/"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <!-- HEADER -->
@@ -129,5 +257,15 @@
     <footer>
       <p>&copy; 2025 Kuba Km. Wszelkie prawa zastrzeżone.</p>
     </footer>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5SJW97M2"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
   </body>
 </html>
