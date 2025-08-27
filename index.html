@@ -70,7 +70,7 @@
     />
 
     <!-- Styles (versioned) -->
-    <link rel="stylesheet" href="/css/main.css?v=3" />
+    <link rel="stylesheet" href="/css/main.css" />
 
     <!-- Structured data (JSON-LD) -->
     <script type="application/ld+json" defer>
@@ -82,10 +82,7 @@
             "@id": "https://www.kubakm-web.pl/#person",
             "name": "Kuba Km",
             "url": "https://www.kubakm-web.pl/",
-            "sameAs": [
-              "https://github.com/USERNAME",
-              "https://www.linkedin.com/in/USERNAME"
-            ],
+            "sameAs": ["https://github.com/KubaKm"],
             "jobTitle": "Frontend & Backend Developer",
             "image": "https://www.kubakm-web.pl/img/avatar.png"
           },
@@ -184,16 +181,15 @@
         <h2>O mnie</h2>
         <div class="about-content">
           <p class="about-paragraph">
-            Jestem pasjonatem programowania od 3 lat, który wierzy, że dobra
-            strona to połączenie funkcjonalności, estetyki i responsywności.
-            Tworzę zarówno frontend, jak i backend, pracując z JavaScript,
-            React, Node.js, Electron, HTML i CSS.
+            Tworzę nowoczesne, responsywne strony i aplikacje (JavaScript,
+            React, Node.js, Electron, HTML/CSS). Moim celem jest dostarczanie
+            działających, estetycznych i przyjaznych użytkownikom rozwiązań
+            webowych.
           </p>
           <p class="about-paragraph">
-            Uwielbiam wyzwania i stale rozwijam swoje umiejętności, aby
-            dostarczać jak najlepsze rozwiązania. Moim celem jest tworzenie
-            nowoczesnych aplikacji i stron internetowych, które działają jak
-            marzenie i są przyjemne w użyciu dla użytkowników.
+            Pomagam firmom i startupom zwiększyć sprzedaż oraz zaangażowanie
+            dzięki funkcjonalnym i szybkim aplikacjom. Uwielbiam wyzwania i
+            stale rozwijam swoje umiejętności.
           </p>
           <ul class="skills-list">
             <li>💻 JavaScript / TypeScript</li>
@@ -203,6 +199,7 @@
             <li>🖥 Electron / Aplikacje Desktopowe</li>
             <li>📱 Responsywny Design / UX</li>
           </ul>
+          <a href="#contact" class="btn">Skontaktuj się ze mną</a>
         </div>
       </section>
 
@@ -211,11 +208,13 @@
         <h2>Projekty</h2>
         <div class="projects-grid">
           <div class="project-card">
-            <img src="img/Project-1.png" alt="Projekt 1" />
+            <img src="img/Project-1.png" alt="Projekt 1" loading="lazy" />
             <h3>Strona Demo Fryzjerki</h3>
             <p>
-              To jest demo aplikacji fryzjerskiej, stworzone w celu prezentacji
-              funkcjonalności i interfejsu.
+              Problem: klient potrzebował nowoczesnej strony do prezentacji
+              usług. Rozwiązanie: zaprojektowałem responsywny interfejs i prosty
+              CMS. Efekt: szybkie ładowanie, przyjazny UX, demo gotowe do
+              prezentacji.
             </p>
             <a
               href="https://www.kubakm-web.pl/demo/fryzjerka/index.html"
@@ -224,11 +223,14 @@
             >
           </div>
           <div class="project-card">
-            <img src="img/Project-2.png" alt="Projekt 1" />
+            <img src="img/Project-2.png" alt="Projekt 2" loading="lazy" />
             <h3>Strona Demo Restauracji</h3>
             <p>
-              To jest demo strony restauracji Domowy Obiadek, stworzone w celu
-              prezentacji funkcjonalności i interfejsu.
+              Problem: restauracja potrzebowała nowoczesnej strony do
+              prezentacji menu i rezerwacji online. Rozwiązanie: stworzyłem
+              responsywny interfejs z prostym systemem rezerwacji i galerią
+              zdjęć. Efekt: szybkie ładowanie, przyjazny UX i atrakcyjna
+              wizualnie strona gotowa do użycia.
             </p>
             <a
               href="https://www.kubakm-web.pl/demo/restauracja/index.html"
@@ -236,6 +238,66 @@
               >Zobacz demo</a
             >
           </div>
+        </div>
+      </section>
+
+      <!-- Sekcja Korzyści / Dlaczego warto -->
+      <section id="benefits">
+        <div class="container">
+          <h2>Dlaczego warto wybrać moje usługi?</h2>
+          <div class="benefits-grid">
+            <div class="benefit-item">
+              <h3>Szybkie realizacje</h3>
+              <p>Projekty realizowane terminowo, bez opóźnień.</p>
+            </div>
+            <div class="benefit-item">
+              <h3>Responsywność</h3>
+              <p>Strony działające perfekcyjnie na każdym urządzeniu.</p>
+            </div>
+            <div class="benefit-item">
+              <h3>Wsparcie</h3>
+              <p>Pomoc techniczna i doradztwo w każdej fazie projektu.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sekcja Opinie / Testimonial -->
+      <section id="testimonials">
+        <div class="container">
+          <h2>Co mówią klienci</h2>
+          <div class="testimonials-grid">
+            <div class="testimonial-item">
+              <p>
+                "Kuba stworzył dla nas stronę, która działa idealnie i wygląda
+                profesjonalnie. Polecam w 100%!"
+              </p>
+              <span>- Anna K.</span>
+            </div>
+            <div class="testimonial-item">
+              <p>
+                "Błyskawiczna realizacja projektu i świetny kontakt. Naprawdę
+                warto!"
+              </p>
+              <span>- Michał S.</span>
+            </div>
+            <div class="testimonial-item">
+              <p>
+                "Najlepszy programista, z jakim współpracowałem. Polecam
+                każdemu!"
+              </p>
+              <span>- Piotr L.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sekcja Call-to-Action -->
+      <section id="cta">
+        <div class="container">
+          <h2>Gotowy na współpracę?</h2>
+          <p>Skontaktuj się ze mną i zacznij swój projekt już dziś!</p>
+          <a href="#contact" class="btn">Napisz do mnie</a>
         </div>
       </section>
 
@@ -266,6 +328,7 @@
         style="display: none; visibility: hidden"
       ></iframe
     ></noscript>
+    <script src="js/anim.js"></script>
     <!-- End Google Tag Manager (noscript) -->
   </body>
 </html>

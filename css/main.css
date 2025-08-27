@@ -3,7 +3,7 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(180deg, #f5f5f5 0%, #e0e0ff 100%); /**/
+  background: linear-gradient(180deg, #f5f5f5 0%, #e0e0ff 100%);
   color: #1a1a1a;
   line-height: 1.6;
   scroll-behavior: smooth;
@@ -35,7 +35,7 @@ header {
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 header h1 {
@@ -65,7 +65,6 @@ header nav ul li a:hover {
 }
 
 /* ---------- Sections ---------- */
-
 main {
   padding: 20px;
 }
@@ -75,14 +74,15 @@ main {
   text-align: center;
   width: 100%;
   box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 0.8s forwards;
+  animation-delay: 0.2s;
 }
 
-.about-section {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.about-section h2 {
+.about-section h2,
+.projects-section h2,
+.contact-section h2 {
   font-size: 2.8rem;
   margin-bottom: 50px;
   color: #4a4dff;
@@ -182,21 +182,10 @@ main {
   left: 0;
   opacity: 0.3;
   border-radius: 5px;
-  animation: width 0.8s ease;
+  animation: width 0.8s ease forwards;
 }
 
 /* ---------- Projects ---------- */
-.projects-section {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.projects-section h2 {
-  font-size: 2.8rem;
-  margin-bottom: 50px;
-  color: #4a4dff;
-}
-
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -213,6 +202,9 @@ main {
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
 }
 
 .project-card img {
@@ -236,21 +228,107 @@ main {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
-.project-card .btn {
-  margin-top: 15px;
-}
+/* ========== NOWE SEKCJE ========== */
 
-.contact-section {
+/* Kontenery i nagłówki */
+#benefits,
+#testimonials,
+#cta {
   padding: 80px 20px;
   text-align: center;
 }
 
-.contact-section h2 {
-  font-size: 2.8rem;
-  margin-bottom: 50px;
-  color: #4a4dff;
+#benefits h2,
+#testimonials h2,
+#cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
 }
 
+/* Sekcja Korzyści */
+.benefits-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.benefit-item {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  width: 280px;
+  transform: translateY(50px);
+  transition: all 0.7s ease-in-out;
+}
+
+.benefit-item img {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.benefit-item h3 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  color: #111;
+}
+
+.benefit-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Sekcja Opinie */
+.testimonials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.testimonial-item {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  width: 300px;
+  font-style: italic;
+  color: #333;
+  transform: translateY(50px);
+  transition: all 0.7s ease-in-out;
+}
+
+.testimonial-item span {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Sekcja CTA */
+#cta {
+  padding: 80px 20px;
+}
+
+#cta p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+/* ========== ANIMACJE FADE-IN przy scrollu ========== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.7s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Contact ---------- */
 .contact-container {
   display: flex;
   gap: 50px;
@@ -351,7 +429,43 @@ footer {
   }
 }
 
+@keyframes width {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 /* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  .benefits-grid,
+  .testimonials-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  .benefit-item,
+  .testimonial-item {
+    width: 90%;
+    max-width: 350px;
+  }
+  .contact-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 15px;
+  }
+  header nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -362,6 +476,7 @@ footer {
   header nav ul {
     flex-direction: column;
     gap: 15px;
+    align-items: center;
   }
 
   .c {
@@ -375,23 +490,90 @@ footer {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+
   .skills-list {
     flex-direction: column;
     gap: 15px;
   }
 
-  .about-section h2 {
-    font-size: 2.2rem;
-    margin-bottom: 40px;
+  .about-section h2,
+  #benefits h2,
+  #testimonials h2,
+  #cta h2,
+  .projects-section h2,
+  .contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 35px;
   }
 
-  .about-paragraph {
+  .about-paragraph,
+  .benefit-item p,
+  .testimonial-item {
+    font-size: 1rem;
+  }
+
+  .benefit-item,
+  .testimonial-item {
+    width: 95%;
+  }
+
+  #cta p {
     font-size: 1.1rem;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 25px;
+    padding: 0 15px;
+  }
+
+  .contact-form button {
+    width: 100%;
   }
 }
 
-@keyframes width {
-  from {
-    width: 0%;
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header nav ul li a {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+
+  .c h1#normal {
+    font-size: 1.8rem;
+  }
+
+  .projects-grid {
+    gap: 20px;
+  }
+
+  .skills-list li {
+    width: 100%;
+    text-align: center;
+  }
+
+  #benefits,
+  #testimonials,
+  #cta {
+    padding: 50px 15px;
+  }
+
+  .benefit-item,
+  .testimonial-item {
+    width: 100%;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
   }
 }
