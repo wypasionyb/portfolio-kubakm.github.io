@@ -2,6 +2,7 @@
 :root {
   --primary: #4a4dff;
   --primary-hover: #3b3fff;
+  --orange: #ffa861;
   --dark: #1a1a1a;
   --light: #fff;
   --border: #ddd;
@@ -9,7 +10,7 @@
   --shadow-medium: rgba(0, 0, 0, 0.1);
   --shadow-strong: rgba(0, 0, 0, 0.15);
   --gradient-bg: linear-gradient(180deg, #f5f5f5 0%, #e0e0ff 100%);
-  --header-bg: linear-gradient(90deg, #fff, #f2f2ff);
+  --header-bg: linear-gradient(90deg, #ffffffbb, #f2f2ffbb);
 }
 
 /* Global Styles & Resets */
@@ -51,6 +52,7 @@ header {
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 8px var(--shadow-light);
+  backdrop-filter: blur(10px);
   transition: background 0.3s ease, transform 0.3s ease;
 }
 header h1 {
@@ -80,7 +82,7 @@ header nav ul li a:hover {
 
 /* Sections */
 main {
-  padding: 20px;
+  padding: 25px;
 }
 .section {
   padding: 80px 20px;
@@ -142,6 +144,11 @@ main {
   box-shadow: 0 10px 20px var(--shadow-light);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   font-weight: 500;
+}
+.skills-list li i,
+.benefit-item i,
+.testimonial-item p i {
+  color: var(--primary);
 }
 .skills-list li:hover {
   transform: translateY(-5px);
@@ -261,7 +268,10 @@ main {
   transform: translateY(50px);
   transition: all 0.7s ease-in-out;
 }
-.benefit-item img {
+.benefit-item h3 {
+  margin-top: 7px;
+}
+.benefit-item .benefit-item img {
   width: 60px;
   margin-bottom: 20px;
 }
@@ -387,6 +397,7 @@ button:hover {
   color: #fff;
   padding: 20px 0;
   text-align: center;
+  border-radius: 6px 6px 0 0;
 }
 .footer-container {
   display: flex;
@@ -425,15 +436,6 @@ button:hover {
 .footer-links a:hover {
   background: var(--primary);
 }
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .footer-right {
-    margin-top: 15px;
-  }
-}
 .block {
   max-width: 300px;
   padding: 20px;
@@ -443,6 +445,26 @@ button:hover {
   flex-direction: column;
   gap: 10px;
   box-shadow: 0 6px 20px var(--shadow-light);
+}
+
+section#contact .block {
+  transition: all 0.3s ease;
+}
+
+/* Temponary CSS  */
+
+section#contact .block i {
+  color: var(--primary);
+  margin: 0 auto;
+}
+
+section#contact .block i.fas.fa-warning {
+  color: var(--orange);
+}
+
+section#contact .block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px var(--shadow-medium);
 }
 
 /* Animations */
@@ -483,6 +505,7 @@ button:hover {
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
 }
+
 .sales-item:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 8px 32px rgba(34, 34, 59, 0.13);
@@ -492,10 +515,16 @@ button:hover {
   margin-bottom: 18px;
   display: block;
 }
+
+.sales-item i {
+  margin: 0 auto !important;
+}
+
 .sales-item h3 {
   font-size: 1.25rem;
   margin-bottom: 12px;
   font-weight: 600;
+  margin-top: 7px;
   color: #22223b;
 }
 .sales-item p {
@@ -524,6 +553,9 @@ button:hover {
   padding: 32px 24px;
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
+}
+.faq-grid .faq-item h3 i {
+  color: var(--primary);
 }
 .faq-item:hover {
   transform: translateY(-5px);
@@ -610,6 +642,13 @@ button:hover {
   }
   #cta p {
     font-size: 1.1rem;
+  }
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-right {
+    margin-top: 15px;
   }
 }
 @media (max-width: 480px) {
