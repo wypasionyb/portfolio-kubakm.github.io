@@ -603,36 +603,6 @@
       ></iframe
     ></noscript>
     <script src="js/anim.js" async></script>
-    <script
-      async
-      custom-element="amp-consent"
-      src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
-    ></script>
-    <meta name="amp-consent-blocking" content="amp-ad" />
-    <script
-      type="text/javascript"
-      data-cmp-ab="1"
-      src="https://cdn.consentmanager.net/delivery/autoblocking/9a08a7e782239.js"
-      data-cmp-host="b.delivery.consentmanager.net"
-      data-cmp-cdn="cdn.consentmanager.net"
-      data-cmp-codesrc="0"
-    ></script>
-    <amp-consent id="ConsentManager" layout="nodisplay" type="ConsentManager">
-      <script type="application/json">
-        {
-          "postPromptUI": "postPromptUI",
-          "clientConfig": {
-            "cdid": "9a08a7e782239",
-            "params": ""
-          }
-        }
-      </script>
-      <div id="postPromptUI">
-        <button on="tap:ConsentManager.prompt()" role="button">
-          Manage privacy settings
-        </button>
-      </div>
-    </amp-consent>
     <!-- End Google Tag Manager (noscript) -->
   </body>
 </html>
