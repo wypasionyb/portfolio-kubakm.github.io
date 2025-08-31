@@ -1,16 +1,1 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const fadeElements = document.querySelectorAll(".fade-in");
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
-
-  fadeElements.forEach((el) => observer.observe(el));
-});
+document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelectorAll(".fade-in"),t=new IntersectionObserver((t=>{t.forEach(t=>{t.isIntersecting&&t.target.classList.add("visible")})}),{threshold:.1});e.forEach(e=>t.observe(e))});
