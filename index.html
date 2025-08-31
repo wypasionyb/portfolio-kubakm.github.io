@@ -88,11 +88,20 @@
     />
 
     <!-- Prefetch / Preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
+      crossorigin="anonymous"
     />
 
     <!-- Styles (versioned) -->
@@ -268,7 +277,13 @@
         <div class="projects-grid">
           <div class="project-card">
             <img
-              src="img/Project-1.webp"
+              src="img/Project-1-800.webp"
+              srcset="
+                img/Project-1-400.webp   400w,
+                img/Project-1-800.webp   800w,
+                img/Project-1-1200.webp 1200w
+              "
+              sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
               alt="Projekt 1"
               loading="lazy"
               draggable="false"
@@ -283,12 +298,20 @@
             <a
               href="https://www.kubakm-web.pl/demo/fryzjerka/index.html"
               class="btn"
-              ><i class="fas fa-eye"></i> Zobacz demo</a
             >
+              <i class="fas fa-eye"></i> Zobacz demo
+            </a>
           </div>
+
           <div class="project-card">
             <img
-              src="img/Project-2.webp"
+              src="img/Project-2-800.webp"
+              srcset="
+                img/Project-2-400.webp   400w,
+                img/Project-2-800.webp   800w,
+                img/Project-2-1200.webp 1200w
+              "
+              sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
               alt="Projekt 2"
               loading="lazy"
               draggable="false"
@@ -304,8 +327,9 @@
             <a
               href="https://www.kubakm-web.pl/demo/restauracja/index.html"
               class="btn"
-              ><i class="fas fa-eye"></i> Zobacz demo</a
             >
+              <i class="fas fa-eye"></i> Zobacz demo
+            </a>
           </div>
         </div>
       </section>
@@ -600,16 +624,6 @@
       </div>
     </footer>
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-5SJW97M2"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
     <script src="js/anim.js" async></script>
-    <!-- End Google Tag Manager (noscript) -->
   </body>
 </html>
