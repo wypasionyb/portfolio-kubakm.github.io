@@ -204,18 +204,26 @@
         <h2>Projekty</h2>
         <div class="projects-grid">
           <div class="project-card">
-            <img
-              src="img/Project-1-800.webp"
-              srcset="
-                img/Project-1-400.webp   400w,
-                img/Project-1-800.webp   800w,
-                img/Project-1-1200.webp 1200w
-              "
-              sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
-              alt="Projekt 1"
-              loading="lazy"
-              draggable="false"
-            />
+            <picture>
+              <source
+                srcset="
+                  img/Project-1-400.webp   400w,
+                  img/Project-1-800.webp   800w,
+                  img/Project-1-1200.webp 1200w
+                "
+                sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
+                type="image/webp"
+              />
+              <img
+                src="img/Project-1-800.webp"
+                alt="Projekt 1"
+                loading="lazy"
+                draggable="false"
+                width="800"
+                height="auto"
+              />
+            </picture>
+
             <h3>Strona Demo Fryzjerki</h3>
             <p>
               Problem: klient potrzebował nowoczesnej strony do prezentacji
@@ -230,18 +238,26 @@
             >
           </div>
           <div class="project-card">
-            <img
-              src="img/Project-2-800.webp"
-              srcset="
-                img/Project-2-400.webp   400w,
-                img/Project-2-800.webp   800w,
-                img/Project-2-1200.webp 1200w
-              "
-              sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
-              alt="Projekt 2"
-              loading="lazy"
-              draggable="false"
-            />
+            <picture>
+              <source
+                srcset="
+                  img/Project-2-400.webp   400w,
+                  img/Project-2-800.webp   800w,
+                  img/Project-2-1200.webp 1200w
+                "
+                sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
+                type="image/webp"
+              />
+              <img
+                src="img/Project-2-800.webp"
+                alt="Projekt 2"
+                loading="lazy"
+                draggable="false"
+                width="800"
+                height="auto"
+              />
+            </picture>
+
             <h3>Strona Demo Restauracji</h3>
             <p>
               Problem: restauracja potrzebowała nowoczesnej strony do
