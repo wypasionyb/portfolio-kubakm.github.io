@@ -112,60 +112,6 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-
-    <script type="application/ld+json" defer>
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "Person",
-            "@id": "https://www.kubakm-web.pl/#person",
-            "name": "Kuba Km",
-            "url": "https://www.kubakm-web.pl/",
-            "sameAs": ["https://github.com/KubaKm"],
-            "jobTitle": "Frontend & Backend Developer",
-            "image": "https://www.kubakm-web.pl/img/icon.webp"
-          },
-          {
-            "@type": "WebSite",
-            "url": "https://www.kubakm-web.pl/",
-            "name": "Kuba Km",
-            "description": "Portfolio frontend i backend developer",
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "https://www.kubakm-web.pl/?s={search_term_string}",
-              "query-input": "required name=search_term_string"
-            }
-          },
-          {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.kubakm-web.pl/"
-              }
-            ]
-          }
-        ]
-      }
-    </script>
-
-    <script defer>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.defer = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-5SJW97M2");
-    </script>
-
-    <script src="js/anim.js" defer></script>
   </head>
   <body>
     <noscript>
