@@ -1,3 +1,6 @@
 /.vscode
 /private
 .prettierignore
+/dashboard
+/js/dashboard_analistycs.js
+/css/dashboard.css
