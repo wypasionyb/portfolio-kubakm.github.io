@@ -113,7 +113,7 @@
       onload="this.onload=null;this.rel='stylesheet'"
     />
   </head>
-  <body>
+  <body onload="load()">
     <noscript>
       <iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-5SJW97M2"
@@ -123,7 +123,7 @@
       ></iframe>
     </noscript>
 
-    <div class="annoucment">
+    <div class="announcement">
       <p>
         Z powodów prawnych nie odbieram połączeń telefonicznych. Proszę o
         kontakt mailowy.
@@ -292,6 +292,13 @@
             <a class="btn"> <i class="fas fa-clock"></i> Już wkrótce... </a>
           </div>
         </div>
+        <!-- <h2 style="margin-top: 40px">
+          Chcesz zobaczyć wszystkie moje projekty?
+        </h2>
+        <p>
+          Aby zobaczyć wszystkie moje projekty, wejdź na
+          <a href="/projects.html">ten link</a>.
+        </p> -->
       </section>
 
       <section id="benefits">
@@ -583,5 +590,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/load.js" defer></script>
   </body>
 </html>
